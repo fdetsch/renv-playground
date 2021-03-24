@@ -67,10 +67,10 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.13.1",
+      "Version": "0.12.5",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "be02499761baab60d58b808efd08c3fc"
+      "Hash": "5c0cdb37f063c58cdab3c7e9fbb8bd2c"
     },
     "sp": {
       "Package": "sp",
@@ -78,6 +78,12 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "dfd843ee98246cf932823acf613b05dd"
+    },
+    "testpkg": {
+      "Package": "testpkg",
+      "Version": "0.1.0",
+      "Source": "Local",
+      "Hash": "9850824c5b4428c0cac3eed444c936e6"
     },
     "zyp": {
       "Package": "zyp",
