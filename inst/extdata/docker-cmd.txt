@@ -1,0 +1,29 @@
+### DOCKER ====
+
+### . create docker image ----
+
+sudo docker build -t hello:0.1.0 .
+
+
+### . run docker container w/renv ----
+### (see https://rstudio.github.io/renv/articles/docker.html#running-docker-containers-with-renv-1)
+
+RENV_PATHS_CACHE_HOST="$HOME"/.local/share/renv/cache
+RENV_PATHS_CACHE_CONTAINER=/renv/cache
+
+sudo docker run \
+    --name hello \
+    -e "RENV_PATHS_CACHE=${RENV_PATHS_CACHE_CONTAINER}" \
+    -v "${RENV_PATHS_CACHE_HOST}:${RENV_PATHS_CACHE_CONTAINER}" \
+    hello:0.1.0 \
+    R --vanilla -s -e 'renv::restore(rebuild = "testpkg"); testpkg::hello()'
+
+
+### . general commands ----
+
+## (list and) remove all stopped containers (see
+## https://phoenixnap.com/kb/remove-docker-images-containers-networks-volumes)
+sudo docker container rm $(sudo docker container ls -aq)
+
+## delete dangling images
+sudo docker rmi `sudo docker images --filter dangling=true -q`

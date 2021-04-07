@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.0.4",
+    "Version": "4.0.5",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -68,7 +68,9 @@
     "renv": {
       "Package": "renv",
       "Version": "0.13.2",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "079cb1f03ff972b30401ed05623cbe92"
     },
     "sp": {
       "Package": "sp",
@@ -79,11 +81,9 @@
     },
     "testpkg": {
       "Package": "testpkg",
-      "Version": "0.1.0",
+      "Version": "0.1.1",
       "Source": "Local",
-      "RemoteType": "local",
-      "RemoteUrl": "/home/fdetsch/Documents/code/renv-playground/renv/local/testpkg_0.1.0.tar.gz",
-      "Hash": "ef82aac41d8ad034338ba807f9d37e40"
+      "Hash": "9975b4751308f688924de833a45509df"
     },
     "zyp": {
       "Package": "zyp",
